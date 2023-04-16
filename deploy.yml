@@ -2,7 +2,7 @@
 - hosts: build
   become: true
   tasks:
-    - name: Install Java and Maven
+    - name: Install Java and Maven and Git
       apt:
         name: "{{ item }}"
         state: latest
