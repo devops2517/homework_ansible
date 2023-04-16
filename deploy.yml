@@ -1,0 +1,11 @@
+---
+- hosts: build
+  become: true
+  tasks:
+    - name: Install Java and Maven
+      apt:
+        name: "{{ item }}"
+        state: latest
+      with_items:
+        - openjdk-8-jdk
+        - maven
