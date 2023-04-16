@@ -2,13 +2,14 @@
 - hosts: build
   become: true
   tasks:
-    - name: Install Java and Maven
+    - name: Install Java, Maven, Git
       apt:
         name: "{{ item }}"
         state: latest
       with_items:
         - openjdk-8-jdk
         - maven
+        - git
 
     - name: Clone the source code repository
       git:
