@@ -36,3 +36,7 @@
         dest: /var/lib/tomcat8/webapps/hello.war
         mode: 0644
 
+    - name: Restart Tomcat
+      service:
+        name: tomcat8
+        state: restarted
