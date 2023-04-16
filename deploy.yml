@@ -30,3 +30,9 @@
         - openjdk-8-jre
         - tomcat8
 
+    - name: Deploy the app to Tomcat
+      copy:
+        src: /opt/hello-world/target/hello-1.0.war
+        dest: /var/lib/tomcat8/webapps/hello.war
+        mode: 0644
+
