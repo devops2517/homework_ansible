@@ -18,3 +18,15 @@
 
     - name: Build the project
       command: mvn package -f /opt/hello-world/pom.xml
+
+- hosts: production
+  become: true
+  tasks:
+    - name: Install Java and Tomcat
+      apt:
+        name: "{{ item }}"
+        state: latest
+      with_items:
+        - openjdk-8-jre
+        - tomcat8
+
