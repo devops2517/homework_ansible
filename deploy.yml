@@ -14,7 +14,6 @@
       git:
         repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
         dest: /etc/hello-world
-        clone: yes
         version: master
 
     - name: Build the project
